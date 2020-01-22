@@ -7,7 +7,7 @@ public class Park {
     private double ticketPriceInHryvnias;
     private boolean playgroundPresence;
     private int numberOfBenches;
-    public static final String CONDITION = "satisfactory";
+    public static final int MONEY_FOR_MAINTAINING_IN_HRYVNIAS = 1000000;
     protected String name;
     protected double parkAreaInHectares;
 
@@ -93,12 +93,12 @@ public class Park {
     }
 
     //methods which print the information about the static field
-    public static void printStaticCondition() {
-        System.out.println(" The condition of every park is " + CONDITION);
+    public static void printStaticMoneyForMaintainingInHryvnias() {
+        System.out.println(" Every year it takes " + MONEY_FOR_MAINTAINING_IN_HRYVNIAS + " hryvnias to maintain every park");
     }
 
-    public void printCondition() {
-        System.out.println(" The condition of this park is " + CONDITION);
+    public void printMoneyForMaintainingInHryvnias() {
+        System.out.println(" Every year it takes " + MONEY_FOR_MAINTAINING_IN_HRYVNIAS + " hryvnias to maintain this park");
     }
 
 

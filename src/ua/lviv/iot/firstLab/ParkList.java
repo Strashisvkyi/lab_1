@@ -1,6 +1,8 @@
 package ua.lviv.iot.firstLab;
 
 public class ParkList {
+    private static int numberOfNewlyBuildParks = 4;
+
     public static void main(String[] args) {
         //objects
         Park centralPark = new Park();
@@ -11,19 +13,20 @@ public class ParkList {
         System.out.println(southPark);
         System.out.println(northPark);
 
-        Park.printStaticCondition();
-        centralPark.printCondition();
+        Park.printStaticMoneyForMaintainingInHryvnias();
+        centralPark.printMoneyForMaintainingInHryvnias();
 
         System.out.println("\n");
+
         int counter = 0;
-        Park[] objects = new Park[4];
+        Park[] objects = new Park[numberOfNewlyBuildParks];
         do {
             objects[counter++] = new Park();
         }
-        while (counter < 4);
+        while (counter < numberOfNewlyBuildParks);
 
-        for (Park newCounter : objects) {
-            System.out.println(newCounter);
+        for (Park park : objects) {
+            System.out.println(park);
         }
 
     }
